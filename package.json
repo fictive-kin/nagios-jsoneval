@@ -1,0 +1,17 @@
+{
+  "name": "nagios-jsoneval",
+  "description": "Abitrary JSON Query/Evaluation (Nagios Plugin)",
+  "version": "0.0.1-dev",
+  "author": "Sean Coates <sean@fictivekin.com>",
+  "contributors": [
+    { "name": "Sean Coates", "email": "sean@fictivekin.com" }
+  ],
+  "keywords": ["http", "json", "query", "nagios"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fictivekin/nagios-jsoneval.git"
+  },
+  "engines": { "node": ">=0.6.0" },
+  "dependencies": { "optimist": ">=0.3.0" },
+  "bin": { "nagios-jsoneval": "./jsoneval.js" }
+}
