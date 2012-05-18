@@ -5,8 +5,6 @@ var version = '0.0.1';
 var usage = "Usage: $0 -u <URI> -e <eval>\n"
  + "  -h  This message\n"
  + "  -u  URI\n"
-// + "  -U  username (HTTP credentials)\n"
-// + "  -P  password (HTTP credentials)\n"
  + "  -e  JS eval\n"
  + "  -a  JS assertion\n"
  + "  -w  Warning threshold\n"
