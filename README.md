@@ -47,8 +47,8 @@ First, you'll need the [RabbitMQ Management Plugin](http://www.rabbitmq.com/mana
     }
 
     define command{
-            command_name    check_rabbitmq_queue_length
-            command_line    /opt/node/bin/node /usr/lib/nagios/plugins/nagios-jsoneval/jsoneval.js -u http://$_HOSTRABBITMQ_USER$:$_HOSTRABBITMQ_PASS$@$HOSTADDRESS$:55672/api/queues -e 'json.forEach(function (q) {if (q.vhost == "$ARG1$" && q.name == "$ARG2$") { retval = q.messages }})' -c $ARG3$ -w $ARG4$
+        command_name    check_rabbitmq_queue_length
+        command_line    /opt/node/bin/node /usr/lib/nagios/plugins/nagios-jsoneval/jsoneval.js -u http://$_HOSTRABBITMQ_USER$:$_HOSTRABBITMQ_PASS$@$HOSTADDRESS$:55672/api/queues -e 'json.forEach(function (q) {if (q.vhost == "$ARG1$" && q.name == "$ARG2$") { retval = q.messages }})' -c $ARG3$ -w $ARG4$
     }
 
     define service {
