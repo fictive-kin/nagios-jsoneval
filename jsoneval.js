@@ -10,6 +10,7 @@ var usage = "Usage: $0 -u <URI> -e <eval>\n"
  + "  -w  Warning threshold\n"
  + "  -c  Critical threshold\n"
  + "  -t  test value\n"
+ + "  -p  print value\n"
  + "nagios-jsoneval Version: " + version;
 
 function exitUsage(msg) {
@@ -162,7 +163,10 @@ function doParse(json) {
 		console.log("OK: value=" + check);
 		process.exit(0);
 
-	}
+	} else if (undefined !== argv.p) {
+        console.log(check);
+        process.exit(0);
+    }
 
 	// no check value, nor critical + warning ranges
 	exitUsage("Missing check value or warning+critical ranges");
